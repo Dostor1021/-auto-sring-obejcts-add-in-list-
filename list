@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.WriteLine("enter 1 to login or press any key to exsit   ");
+        int x = Convert.ToInt32(Console.ReadLine());
+        do
+        {
+            if (x == 1)
+            {
+                Console.WriteLine("Enter ID: ");
+                int id = Convert.ToInt32(Console.ReadLine());
+                var accounts = new List<int>();
+                accounts.Add(id);
+
+                Console.WriteLine("Enter password: ");
+                int pass = Convert.ToInt32(Console.ReadLine());
+                var password = new List<int>();
+                password.Add(pass);
+
+                Console.WriteLine("login ");
+                Console.WriteLine("enter id ");
+                int actId = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter password  ");
+                int actpass = Convert.ToInt32(Console.ReadLine());
+                if ((actId == id) && (actpass == pass))
+                {
+                    Console.WriteLine("ok kr ");
+                }
+                else
+                {
+                    Console.WriteLine("wrong id  ");
+
+               
+                }
+             
+            
+            
+            }
+
+            else
+            {
+                return;
+            }
+        }
+        while (true);
+        Console.ReadLine();
+    }
+}
